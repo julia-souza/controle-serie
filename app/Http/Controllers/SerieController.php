@@ -8,11 +8,16 @@ class SerieController extends Controller
 {
     public function index() {
 
-        $series = [
-            'Grey\'s Anatomy',
-            'Lost',
-            'Agents of SHIELD'
-        ];
+        // $series = [
+        //     'Grey\'s Anatomy',
+        //     'Lost',
+        //     'Agents of SHIELD'
+        // ];
+        
+        $series = Serie::all();
+       
+         
+
         return view ('series.index', compact('series'));
     }
 
@@ -21,10 +26,14 @@ class SerieController extends Controller
     }
 
     public function store(Request $request){
-        $nome = $request->nome;
-        $serie = new Serie();
-        $serie->nome = $nome;
-        $serie->save();
+        // $serie = $request->nome;
+        // $nome = $request->nome;
+        // $serie->save();
+
+        $serie = Serie::create($request->all());
+      
+        return redirect('/'); 
+        
     }
 
 

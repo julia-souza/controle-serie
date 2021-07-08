@@ -7,8 +7,9 @@
 @endsection
 
 @section('conteudo')
+  
+<form method="post">
     @csrf
-    <form method="post">
         <div class="form-group">
             <label for="nome">Título da Série</label>
             <input type="text" name="nome" id="nome" class="form-control">

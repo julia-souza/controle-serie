@@ -10,6 +10,7 @@ class Serie extends Model
     // protected $table = 'series';
     
     // public $timestamps = FALSE;   
+    protected $filable = ['nome'];
     
     use HasFactory;
 }

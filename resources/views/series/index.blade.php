@@ -1,4 +1,3 @@
-
 @extends('layout')
 
 @section('cabecalho')
@@ -14,14 +13,15 @@
 
     <ul class="list-group">
         {{--  @foreach ($series as $series)
-            <li class="list-group-item"><?= $serie; ?></li>
+            <li class="list-group-item"> {{ $serie->nome }}</li>
         @endforeach  --}}
 
-        <?php 
+       <?php 
             foreach ($series as $serie): ?>
                 <li class="list-group-item"><?= $serie; ?></li>
+                
         <?php endforeach; ?> 
-        
+     
     </ul>
 
 @endsection
