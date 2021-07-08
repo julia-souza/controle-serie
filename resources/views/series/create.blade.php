@@ -7,7 +7,7 @@
 @endsection
 
 @section('conteudo')
-    
+    @csrf
     <form method="post">
         <div class="form-group">
             <label for="nome">Título da Série</label>

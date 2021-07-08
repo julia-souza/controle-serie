@@ -15,7 +15,8 @@ class CriarTabelaSeries extends Migration
     {
         
         Schema::create('series', function (Blueprint $table) {
-            $table->string('nome');            
+            $table->string('nome');    
+            $table->timestamps();        
         });
         
     }

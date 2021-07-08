@@ -20,5 +20,12 @@ class SerieController extends Controller
         return view ('series.create');
     }
 
+    public function store(Request $request){
+        $nome = $request->nome;
+        $serie = new Serie();
+        $serie->nome = $nome;
+        $serie->save();
+    }
+
 
 }
