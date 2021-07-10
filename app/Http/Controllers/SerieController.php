@@ -6,15 +6,15 @@ use Illuminate\Http\Request;
 
 class SerieController extends Controller
 {
-    public function index() {
+    public function index(Request $request){
 
-        // $series = [
-        //     'Grey\'s Anatomy',
-        //     'Lost',
-        //     'Agents of SHIELD'
-        // ];
+        $series = [
+            'Grey\'s Anatomy',
+            'Lost',
+            'Agents of SHIELD'
+        ];
         
-        $series = Serie::all();
+        // $series = Serie::all();
        
          
 
@@ -26,13 +26,13 @@ class SerieController extends Controller
     }
 
     public function store(Request $request){
-        // $serie = $request->nome;
+        $serie = $request->nome;
         // $nome = $request->nome;
-        // $serie->save();
+        $serie->save();
 
         $serie = Serie::create($request->all());
       
-        return redirect('/'); 
+        // return redirect('/'); 
         
     }
 
